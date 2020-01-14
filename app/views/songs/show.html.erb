@@ -1,0 +1,17 @@
+<h1><%= @song.name %></h1><br>
+
+<div>
+    <% @artists.each do |artist| %>
+    <% if artist.id == @song.artist_id %>
+    Artist: <a href="<%=artist_path(artist)%>"><%= artist.name %></a>
+    <% end %>
+    <% end %>
+</div>
+<div>
+    <% @genres.each do |genre| %>
+    <% if genre.id == @song.genre_id %>
+    Genre: <a href="<%=genre_path(genre)%>"><%= genre.name %></a>
+    <% end %>
+    <% end %>
+</div>
+
